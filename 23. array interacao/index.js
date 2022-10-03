@@ -267,4 +267,112 @@ var maiorQue3 = numeros.every(x => x > 3); // true
 
 
 
-// 
+// [].FIND() E [].FINDINDEX()
+// [].find(), retorna o valor atual da primeira iteração que retornar um valor truthy. Já o [].findIndex(), ao invés de retornar o valor, retorna o index deste valor na array.
+var frutas = ['Banana', 'Pêra', 'Uva', 'Maçã'];
+var buscaUva = frutas.findIndex((fruta) => {
+  return fruta === 'Uva';
+}); // 2
+
+var numeros = [6, 43, 22, 88, 101, 29];
+var buscaMaior45 = numeros.find(x => x > 45); // 88
+
+
+
+// [].FILTER()
+// [].filter(), retorna uma array com a lista de valores que durante a sua iteração, retornaram um valor truthy
+var frutas = ['Banana', undefined, null, '', 'Uva', 0, 'Maçã'];
+var arrayLimpa = frutas.filter((fruta) => {
+  return fruta;
+}); // ['Banana', 'Uva', 'Maçã'];
+
+var numeros = [6, 43, 22, 88, 101, 29];
+var buscaMaior45 = numeros.filter(x => x > 45); // [88, 101]
+
+
+
+// FILTER EM OBJETOS
+var aulas = [
+  {
+    nome: 'HTML 1',
+    min: 15
+  },
+  {
+    nome: 'HTML 2',
+    min: 10
+  },
+  {
+    nome: 'CSS 1',
+    min: 20
+  },
+  {
+    nome: 'JS 1',
+    min: 25
+  },
+]
+
+var aulasMaiores = aulas.filter((aula) => { 
+  return aula.min > 15;
+});
+// [{nome: 'CSS 1', min: 20}, {nome: 'JS 1', min: 25}]
+
+
+
+// EXERCÍCIOS
+/* <section class="curso">
+  <h1>Web Design Completo</h1>
+  <p>Este curso é para quem deseja entrar ou já está no mercado de criação de websites.</p>
+  <span class="aulas">80</span>
+  <span class="horas">22</span>
+</section>
+<section class="curso">
+  <h1>WordPress Como CMS</h1>
+  <p>No curso de WordPress Como CMS, você aprende do zero como pegar qualquer site em HTML e torná-lo totalmente gerenciável com a plataforma do WordPress.</p>
+  <span class="aulas">46</span>
+  <span class="horas">9</span>
+</section>
+<section class="curso">
+  <h1>UI Design Avançado</h1>
+  <p>Este é um curso avançado de User Interface Design.</p>
+  <span class="aulas">55</span>
+  <span class="horas">15</span>
+</section> */
+
+// Selecione cada curso e retorne uma array
+// com objetos contendo o título, descricao,
+// aulas e horas de cada curso
+
+
+// Retorne uma lista com os
+// números maiores que 100
+var numeros = [3, 44, 333, 23, 122, 322, 33];
+
+
+// Verifique se Baixo faz parte
+// da lista de instrumentos e retorne true
+var instrumentos = ['Guitarra', 'Baixo', 'Bateria', 'Teclado']
+
+
+// Retorne o valor total das compras
+var compras = [
+  {
+    item: 'Banana',
+    preco: 'R$ 4,99'
+  },
+  {
+    item: 'Ovo',
+    preco: 'R$ 2,99'
+  },
+  {
+    item: 'Carne',
+    preco: 'R$ 25,49'
+  },
+  {
+    item: 'Refrigerante',
+    preco: 'R$ 5,35'
+  },
+  {
+    item: 'Quejo',
+    preco: 'R$ 10,60'
+  }
+]
